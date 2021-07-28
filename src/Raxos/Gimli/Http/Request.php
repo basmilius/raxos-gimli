@@ -52,11 +52,21 @@ class Request extends HttpRequest
         $this->method = \strtolower($swooleRequest->getMethod());
     }
 
+    /**
+     * {@inheritdoc}
+     * @author Bas Milius <bas@glybe.nl>
+     * @since 1.0.0
+     */
     public function pathName(): string
     {
         return $this->server->get('request_uri');
     }
 
+    /**
+     * {@inheritdoc}
+     * @author Bas Milius <bas@glybe.nl>
+     * @since 1.0.0
+     */
     public function uri(): string
     {
         $queryString = $this->server->get('query_string');
@@ -68,6 +78,11 @@ class Request extends HttpRequest
         return $this->server->get('request_uri');
     }
 
+    /**
+     * {@inheritdoc}
+     * @author Bas Milius <bas@glybe.nl>
+     * @since 1.0.0
+     */
     public function ip(): IPv4|IPv6|null
     {
         if ($this->cache->has('ip')) {
@@ -81,17 +96,32 @@ class Request extends HttpRequest
         return $ip;
     }
 
+    /**
+     * {@inheritdoc}
+     * @author Bas Milius <bas@glybe.nl>
+     * @since 1.0.0
+     */
     public function isSecure(): bool
     {
         // todo(Bas): need a better solution for this.
         return (int)$this->server->get('server_port') === 443;
     }
 
+    /**
+     * {@inheritdoc}
+     * @author Bas Milius <bas@glybe.nl>
+     * @since 1.0.0
+     */
     public function bodyString(): string
     {
         return $this->body;
     }
 
+    /**
+     * {@inheritdoc}
+     * @author Bas Milius <bas@glybe.nl>
+     * @since 1.0.0
+     */
     public function userAgent(): UserAgent
     {
         if ($this->cache->has('user_agent')) {
@@ -105,6 +135,15 @@ class Request extends HttpRequest
         return $ua;
     }
 
+    /**
+     * Converts the incoming swoole request files to our key value store.
+     *
+     * @param array $swooleFiles
+     *
+     * @return ReadonlyKeyValue
+     * @author Bas Milius <bas@glybe.nl>
+     * @since 1.0.0
+     */
     private static function convertSwooleFiles(array $swooleFiles): ReadonlyKeyValue
     {
         $files = [];
