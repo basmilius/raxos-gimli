@@ -111,6 +111,7 @@ abstract class RouterHttpServer extends HttpServer implements RouterEffectsInter
      *
      * @param CoroutineRouter $router
      *
+     * @throws RouterException
      * @author Bas Milius <bas@glybe.nl>
      * @since 1.0.0
      */
@@ -121,6 +122,7 @@ abstract class RouterHttpServer extends HttpServer implements RouterEffectsInter
      *
      * @param CoroutineRouter $router
      *
+     * @throws RouterException
      * @author Bas Milius <bas@glybe.nl>
      * @since 1.0.0
      */
@@ -132,6 +134,7 @@ abstract class RouterHttpServer extends HttpServer implements RouterEffectsInter
      * @param CoroutineRouter $router
      * @param Request $request
      *
+     * @throws RouterException
      * @author Bas Milius <bas@glybe.nl>
      * @since 1.0.0
      */
@@ -148,9 +151,10 @@ abstract class RouterHttpServer extends HttpServer implements RouterEffectsInter
 
         /** @var CoroutineRouter $router */
         $router = CoroutineState::get('router');
-        $this->registerRequestGlobals($router, $request);
 
         try {
+            $this->registerRequestGlobals($router, $request);
+
             $effect = $router->resolve($request->method(), $request->pathName());
 
             switch (true) {
@@ -179,7 +183,20 @@ abstract class RouterHttpServer extends HttpServer implements RouterEffectsInter
     }
 
     /**
+     * Invoked when the router is available to a worker.
+     *
+     * @param CoroutineRouter $router
+     *
+     * @author Bas Milius <bas@glybe.nl>
+     * @since 1.0.0
+     */
+    protected function onRouterAvailable(CoroutineRouter $router): void
+    {
+    }
+
+    /**
      * {@inheritdoc}
+     * @throws RouterException
      * @author Bas Milius <bas@glybe.nl>
      * @since 1.0.0
      */
@@ -191,6 +208,7 @@ abstract class RouterHttpServer extends HttpServer implements RouterEffectsInter
 
         $this->registerControllers($router);
         $this->registerGlobals($router);
+        $this->onRouterAvailable($router);
 
         $router->prepareForResolving();
 

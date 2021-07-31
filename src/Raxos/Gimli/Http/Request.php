@@ -13,6 +13,7 @@ use Raxos\Http\HttpFile;
 use Raxos\Http\HttpRequest;
 use Raxos\Http\UserAgent;
 use Swoole\Http\Request as SwooleRequest;
+use function strtolower;
 
 /**
  * Class Request
@@ -49,7 +50,7 @@ class Request extends HttpRequest
         $this->server = new ReadonlyKeyValue($swooleRequest->server);
 
         $this->body = $swooleRequest->getContent();
-        $this->method = \strtolower($swooleRequest->getMethod());
+        $this->method = strtolower($swooleRequest->getMethod());
     }
 
     /**
