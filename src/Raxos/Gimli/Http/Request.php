@@ -42,7 +42,7 @@ class Request extends HttpRequest
         }
 
         $this->cache = new SimpleKeyValue();
-        $this->cookies = new ReadonlyKeyValue($swooleRequest->cookie);
+        $this->cookies = new ReadonlyKeyValue($swooleRequest->cookie ?? []);
         $this->files = self::convertSwooleFiles($swooleRequest->files ?? []);
         $this->headers = new ReadonlyKeyValue($swooleRequest->header);
         $this->post = new ReadonlyKeyValue($swooleRequest->post ?? []);

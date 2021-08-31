@@ -28,24 +28,6 @@ abstract class RouterHttpServer extends HttpServer implements RouterEffectsInter
 {
 
     /**
-     * RouterHttpServer constructor.
-     *
-     * @param string $host
-     * @param int $port
-     * @param int $mode
-     * @param int $socketType
-     *
-     * @author Bas Milius <bas@glybe.nl>
-     * @since 1.0.0
-     */
-    public function __construct(string $host, int $port, int $mode = SWOOLE_PROCESS, int $socketType = SWOOLE_SOCK_TCP)
-    {
-        parent::__construct($host, $port, $mode, $socketType);
-
-        $this->start();
-    }
-
-    /**
      * {@inheritdoc}
      * @author Bas Milius <bas@glybe.nl>
      * @since 1.0.0

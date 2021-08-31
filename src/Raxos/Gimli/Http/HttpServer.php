@@ -55,6 +55,22 @@ class HttpServer
     }
 
     /**
+     * Applies the given options to the server.
+     *
+     * @param array $options
+     *
+     * @return $this
+     * @author Bas Milius <bas@glybe.nl>
+     * @since 2.0.0
+     */
+    protected final function options(array $options): static
+    {
+        $this->server->set($options);
+
+        return $this;
+    }
+
+    /**
      * Invoked on an incoming request.
      *
      * @param Request $request
