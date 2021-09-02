@@ -10,7 +10,7 @@ use Raxos\Foundation\Storage\SimpleKeyValue;
  *
  * @mixin SimpleKeyValue
  *
- * @author Bas Milius <bas@glybe.nl>
+ * @author Bas Milius <bas@mili.us>
  * @package Raxos\Gimli\Coroutine
  * @since 1.0.0
  */
@@ -25,7 +25,7 @@ class CoroutineState
      * @param string $key
      *
      * @return mixed
-     * @author Bas Milius <bas@glybe.nl>
+     * @author Bas Milius <bas@mili.us>
      * @since 1.0.0
      */
     public static function get(string $key): mixed
@@ -41,7 +41,7 @@ class CoroutineState
      * @param string $key
      *
      * @return bool
-     * @author Bas Milius <bas@glybe.nl>
+     * @author Bas Milius <bas@mili.us>
      * @since 1.0.0
      */
     public static function has(string $key): bool
@@ -57,7 +57,7 @@ class CoroutineState
      * @param string $key
      * @param mixed $value
      *
-     * @author Bas Milius <bas@glybe.nl>
+     * @author Bas Milius <bas@mili.us>
      * @since 1.0.0
      */
     public static function set(string $key, mixed $value): void
@@ -71,7 +71,7 @@ class CoroutineState
      *
      * @param string $key
      *
-     * @author Bas Milius <bas@glybe.nl>
+     * @author Bas Milius <bas@mili.us>
      * @since 1.0.0
      */
     public static function unset(string $key): void

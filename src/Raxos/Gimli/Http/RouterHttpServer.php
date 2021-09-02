@@ -20,7 +20,7 @@ use function sprintf;
 /**
  * Class RouterHttpServer
  *
- * @author Bas Milius <bas@glybe.nl>
+ * @author Bas Milius <bas@mili.us>
  * @package Raxos\Gimli\Http
  * @since 1.0.0
  */
@@ -29,7 +29,7 @@ abstract class RouterHttpServer extends HttpServer implements RouterEffectsInter
 
     /**
      * {@inheritdoc}
-     * @author Bas Milius <bas@glybe.nl>
+     * @author Bas Milius <bas@mili.us>
      * @since 1.0.0
      */
     public function onNotFoundEffect(Request $request, SwooleResponse $response, NotFoundEffect $effect): void
@@ -40,7 +40,7 @@ abstract class RouterHttpServer extends HttpServer implements RouterEffectsInter
 
     /**
      * {@inheritdoc}
-     * @author Bas Milius <bas@glybe.nl>
+     * @author Bas Milius <bas@mili.us>
      * @since 1.0.0
      */
     public function onRedirectEffect(Request $request, SwooleResponse $response, RedirectEffect $effect): void
@@ -51,7 +51,7 @@ abstract class RouterHttpServer extends HttpServer implements RouterEffectsInter
 
     /**
      * {@inheritdoc}
-     * @author Bas Milius <bas@glybe.nl>
+     * @author Bas Milius <bas@mili.us>
      * @since 1.0.0
      */
     public function onResponseEffect(Request $request, SwooleResponse $response, ResponseEffect $effect): void
@@ -70,7 +70,7 @@ abstract class RouterHttpServer extends HttpServer implements RouterEffectsInter
 
     /**
      * {@inheritdoc}
-     * @author Bas Milius <bas@glybe.nl>
+     * @author Bas Milius <bas@mili.us>
      * @since 1.0.0
      */
     public function onVoidEffect(Request $request, SwooleResponse $response, VoidEffect $effect): void
@@ -79,7 +79,7 @@ abstract class RouterHttpServer extends HttpServer implements RouterEffectsInter
 
     /**
      * {@inheritdoc}
-     * @author Bas Milius <bas@glybe.nl>
+     * @author Bas Milius <bas@mili.us>
      * @since 1.0.0
      */
     public function onRouterException(Request $request, SwooleResponse $response, RouterException $exception): void
@@ -94,7 +94,7 @@ abstract class RouterHttpServer extends HttpServer implements RouterEffectsInter
      * @param CoroutineRouter $router
      *
      * @throws RouterException
-     * @author Bas Milius <bas@glybe.nl>
+     * @author Bas Milius <bas@mili.us>
      * @since 1.0.0
      */
     protected abstract function registerControllers(CoroutineRouter $router): void;
@@ -105,7 +105,7 @@ abstract class RouterHttpServer extends HttpServer implements RouterEffectsInter
      * @param CoroutineRouter $router
      *
      * @throws RouterException
-     * @author Bas Milius <bas@glybe.nl>
+     * @author Bas Milius <bas@mili.us>
      * @since 1.0.0
      */
     protected abstract function registerGlobals(CoroutineRouter $router): void;
@@ -117,14 +117,14 @@ abstract class RouterHttpServer extends HttpServer implements RouterEffectsInter
      * @param Request $request
      *
      * @throws RouterException
-     * @author Bas Milius <bas@glybe.nl>
+     * @author Bas Milius <bas@mili.us>
      * @since 1.0.0
      */
     protected abstract function registerRequestGlobals(CoroutineRouter $router, Request $request): void;
 
     /**
      * {@inheritdoc}
-     * @author Bas Milius <bas@glybe.nl>
+     * @author Bas Milius <bas@mili.us>
      * @since 1.0.0
      */
     protected function onRequest(Request $request, SwooleResponse $response): void
@@ -169,7 +169,7 @@ abstract class RouterHttpServer extends HttpServer implements RouterEffectsInter
      *
      * @param CoroutineRouter $router
      *
-     * @author Bas Milius <bas@glybe.nl>
+     * @author Bas Milius <bas@mili.us>
      * @since 1.0.0
      */
     protected function onRouterAvailable(CoroutineRouter $router): void
@@ -179,7 +179,7 @@ abstract class RouterHttpServer extends HttpServer implements RouterEffectsInter
     /**
      * {@inheritdoc}
      * @throws RouterException
-     * @author Bas Milius <bas@glybe.nl>
+     * @author Bas Milius <bas@mili.us>
      * @since 1.0.0
      */
     protected function onWorkerStart(int $workerId): void

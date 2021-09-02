@@ -18,9 +18,9 @@ use function strtolower;
 /**
  * Class Request
  *
- * @author Bas Milius <bas@glybe.nl>
+ * @author Bas Milius <bas@mili.us>
  * @package Raxos\Gimli\Http
- * @since
+ * @since 1.0.0
  */
 class Request extends HttpRequest
 {
@@ -32,7 +32,7 @@ class Request extends HttpRequest
      *
      * @param SwooleRequest $swooleRequest
      *
-     * @author Bas Milius <bas@glybe.nl>
+     * @author Bas Milius <bas@mili.us>
      * @since 1.0.0
      */
     public function __construct(SwooleRequest $swooleRequest)
@@ -55,7 +55,7 @@ class Request extends HttpRequest
 
     /**
      * {@inheritdoc}
-     * @author Bas Milius <bas@glybe.nl>
+     * @author Bas Milius <bas@mili.us>
      * @since 1.0.0
      */
     public function pathName(): string
@@ -65,7 +65,7 @@ class Request extends HttpRequest
 
     /**
      * {@inheritdoc}
-     * @author Bas Milius <bas@glybe.nl>
+     * @author Bas Milius <bas@mili.us>
      * @since 1.0.0
      */
     public function uri(): string
@@ -81,7 +81,7 @@ class Request extends HttpRequest
 
     /**
      * {@inheritdoc}
-     * @author Bas Milius <bas@glybe.nl>
+     * @author Bas Milius <bas@mili.us>
      * @since 1.0.0
      */
     public function ip(): IPv4|IPv6|null
@@ -99,7 +99,7 @@ class Request extends HttpRequest
 
     /**
      * {@inheritdoc}
-     * @author Bas Milius <bas@glybe.nl>
+     * @author Bas Milius <bas@mili.us>
      * @since 1.0.0
      */
     public function isSecure(): bool
@@ -110,7 +110,7 @@ class Request extends HttpRequest
 
     /**
      * {@inheritdoc}
-     * @author Bas Milius <bas@glybe.nl>
+     * @author Bas Milius <bas@mili.us>
      * @since 1.0.0
      */
     public function bodyString(): string
@@ -120,7 +120,7 @@ class Request extends HttpRequest
 
     /**
      * {@inheritdoc}
-     * @author Bas Milius <bas@glybe.nl>
+     * @author Bas Milius <bas@mili.us>
      * @since 1.0.0
      */
     public function userAgent(): UserAgent
@@ -142,7 +142,7 @@ class Request extends HttpRequest
      * @param array $swooleFiles
      *
      * @return ReadonlyKeyValue
-     * @author Bas Milius <bas@glybe.nl>
+     * @author Bas Milius <bas@mili.us>
      * @since 1.0.0
      */
     private static function convertSwooleFiles(array $swooleFiles): ReadonlyKeyValue

@@ -8,7 +8,7 @@ use Raxos\Router\Router;
 /**
  * Class CoroutineRouter
  *
- * @author Bas Milius <bas@glybe.nl>
+ * @author Bas Milius <bas@mili.us>
  * @package Raxos\Gimli\Router
  * @since 1.0.0
  */
@@ -18,7 +18,7 @@ class CoroutineRouter extends Router
     /**
      * Resolves the route mappings and call stack.
      *
-     * @author Bas Milius <bas@glybe.nl>
+     * @author Bas Milius <bas@mili.us>
      * @since 1.0.0
      */
     public final function prepareForResolving(): void

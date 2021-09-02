@@ -14,7 +14,7 @@ use Swoole\Http\Response as SwooleResponse;
 /**
  * Interface RouterEffectsInterface
  *
- * @author Bas Milius <bas@glybe.nl>
+ * @author Bas Milius <bas@mili.us>
  * @package Raxos\Router
  * @since 1.0.0
  */
@@ -28,7 +28,7 @@ interface RouterEffectsInterface
      * @param SwooleResponse $response
      * @param NotFoundEffect $effect
      *
-     * @author Bas Milius <bas@glybe.nl>
+     * @author Bas Milius <bas@mili.us>
      * @since 1.0.0
      */
     public function onNotFoundEffect(Request $request, SwooleResponse $response, NotFoundEffect $effect): void;
@@ -40,7 +40,7 @@ interface RouterEffectsInterface
      * @param SwooleResponse $response
      * @param RedirectEffect $effect
      *
-     * @author Bas Milius <bas@glybe.nl>
+     * @author Bas Milius <bas@mili.us>
      * @since 1.0.0
      */
     public function onRedirectEffect(Request $request, SwooleResponse $response, RedirectEffect $effect): void;
@@ -52,7 +52,7 @@ interface RouterEffectsInterface
      * @param SwooleResponse $response
      * @param ResponseEffect $effect
      *
-     * @author Bas Milius <bas@glybe.nl>
+     * @author Bas Milius <bas@mili.us>
      * @since 1.0.0
      */
     public function onResponseEffect(Request $request, SwooleResponse $response, ResponseEffect $effect): void;
@@ -64,7 +64,7 @@ interface RouterEffectsInterface
      * @param SwooleResponse $response
      * @param VoidEffect $effect
      *
-     * @author Bas Milius <bas@glybe.nl>
+     * @author Bas Milius <bas@mili.us>
      * @since 1.0.0
      */
     public function onVoidEffect(Request $request, SwooleResponse $response, VoidEffect $effect): void;
@@ -76,7 +76,7 @@ interface RouterEffectsInterface
      * @param SwooleResponse $response
      * @param RouterException $exception
      *
-     * @author Bas Milius <bas@glybe.nl>
+     * @author Bas Milius <bas@mili.us>
      * @since 1.0.0
      */
     public function onRouterException(Request $request, SwooleResponse $response, RouterException $exception): void;

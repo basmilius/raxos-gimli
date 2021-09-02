@@ -8,7 +8,7 @@ use Swoole\Process\Manager;
 /**
  * Class ProcessManager
  *
- * @author Bas Milius <bas@glybe.nl>
+ * @author Bas Milius <bas@mili.us>
  * @package Raxos\Gimli\Process
  * @since 1.0.0
  */
@@ -20,7 +20,7 @@ class ProcessManager
     /**
      * ProcessManager constructor.
      *
-     * @author Bas Milius <bas@glybe.nl>
+     * @author Bas Milius <bas@mili.us>
      * @since 1.0.0
      */
     public function __construct()
@@ -35,7 +35,7 @@ class ProcessManager
      * @param bool $enableCoroutine
      *
      * @return $this
-     * @author Bas Milius <bas@glybe.nl>
+     * @author Bas Milius <bas@mili.us>
      * @since 1.0.0
      */
     public function add(callable $fn, bool $enableCoroutine = false): static
@@ -48,7 +48,7 @@ class ProcessManager
     /**
      * Runs all processes that are registered with the process manager.
      *
-     * @author Bas Milius <bas@glybe.nl>
+     * @author Bas Milius <bas@mili.us>
      * @since 1.0.0
      */
     public function start(): void
@@ -60,7 +60,7 @@ class ProcessManager
      * Returns a new instance of the process manager.
      *
      * @return static
-     * @author Bas Milius <bas@glybe.nl>
+     * @author Bas Milius <bas@mili.us>
      * @since 1.0.0
      */
     public static function new(): static

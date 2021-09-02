@@ -10,7 +10,7 @@ use Swoole\Http\Server;
 /**
  * Class HttpServer
  *
- * @author Bas Milius <bas@glybe.nl>
+ * @author Bas Milius <bas@mili.us>
  * @package Raxos\Gimli\Http
  * @since 1.0.0
  */
@@ -27,7 +27,7 @@ class HttpServer
      * @param int $mode
      * @param int $socketType
      *
-     * @author Bas Milius <bas@glybe.nl>
+     * @author Bas Milius <bas@mili.us>
      * @since 1.0.0
      */
     public function __construct(string $host, int $port, int $mode = SWOOLE_PROCESS, int $socketType = SWOOLE_SOCK_TCP)
@@ -39,7 +39,7 @@ class HttpServer
      * Starts the server.
      *
      * @return bool
-     * @author Bas Milius <bas@glybe.nl>
+     * @author Bas Milius <bas@mili.us>
      * @since 1.0.0
      */
     public function start(): bool
@@ -60,8 +60,8 @@ class HttpServer
      * @param array $options
      *
      * @return $this
-     * @author Bas Milius <bas@glybe.nl>
-     * @since 2.0.0
+     * @author Bas Milius <bas@mili.us>
+     * @since 1.0.0
      */
     protected final function options(array $options): static
     {
@@ -76,7 +76,7 @@ class HttpServer
      * @param Request $request
      * @param SwooleResponse $response
      *
-     * @author Bas Milius <bas@glybe.nl>
+     * @author Bas Milius <bas@mili.us>
      * @since 1.0.0
      */
     protected function onRequest(Request $request, SwooleResponse $response): void
@@ -86,7 +86,7 @@ class HttpServer
     /**
      * Invoked when the server is shutting down.
      *
-     * @author Bas Milius <bas@glybe.nl>
+     * @author Bas Milius <bas@mili.us>
      * @since 1.0.0
      */
     protected function onShutdown(): void
@@ -97,7 +97,7 @@ class HttpServer
     /**
      * Invoked when the server has started.
      *
-     * @author Bas Milius <bas@glybe.nl>
+     * @author Bas Milius <bas@mili.us>
      * @since 1.0.0
      */
     protected function onStart(): void
@@ -110,7 +110,7 @@ class HttpServer
      *
      * @param int $workerId
      *
-     * @author Bas Milius <bas@glybe.nl>
+     * @author Bas Milius <bas@mili.us>
      * @since 1.0.0
      */
     protected function onWorkerExit(int $workerId): void
@@ -122,7 +122,7 @@ class HttpServer
      *
      * @param int $workerId
      *
-     * @author Bas Milius <bas@glybe.nl>
+     * @author Bas Milius <bas@mili.us>
      * @since 1.0.0
      */
     protected function onWorkerStart(int $workerId): void
@@ -134,7 +134,7 @@ class HttpServer
      *
      * @param int $workerId
      *
-     * @author Bas Milius <bas@glybe.nl>
+     * @author Bas Milius <bas@mili.us>
      * @since 1.0.0
      */
     protected function onWorkerStop(int $workerId): void
@@ -147,7 +147,7 @@ class HttpServer
      * @param SwooleRequest $request
      * @param SwooleResponse $response
      *
-     * @author Bas Milius <bas@glybe.nl>
+     * @author Bas Milius <bas@mili.us>
      * @since 1.0.0
      */
     private function handleOnRequest(SwooleRequest $request, SwooleResponse $response): void
