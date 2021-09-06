@@ -51,7 +51,7 @@ class HttpServer
         $this->server->on('workerStart', fn(Server $server, int $workerId) => $this->onWorkerStart($workerId));
         $this->server->on('workerStop', fn(Server $server, int $workerId) => $this->onWorkerStop($workerId));
 
-        return $this->server->start();
+        return @$this->server->start();
     }
 
     /**
